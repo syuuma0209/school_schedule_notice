@@ -1,4 +1,4 @@
-function get_message_homework() {
+function get_message_homework(homework_data) {
 var data ={
   "type": "bubble",
   "body": {
@@ -15,18 +15,7 @@ var data ={
       {
         "type": "box",
         "layout": "vertical",
-        "contents": [
-          {
-            "type": "text",
-            "text": "●英語：アプローズ",
-            "color": "#ffffff"
-          },
-          {
-            "type": "text",
-            "text": "●英語：アプローズ",
-            "color": "#ffffff"
-          }
-        ],
+        "contents": homework_data,
         "paddingStart": "10px",
         "paddingTop": "10px"
       }

@@ -1,4 +1,4 @@
-function sendWithMessaging_homework() {
+function sendWithMessaging_homework(homework_data) {
   //送信
 
   //各パラメータ
@@ -15,7 +15,7 @@ function sendWithMessaging_homework() {
 
 
   //送信するメッセージを生成
-  const flexMessage = get_message_homework();
+  const flexMessage = get_message_homework(homework_data);
 
   //ペイロードを作成
   const payload = {
