@@ -2,7 +2,7 @@ function get_wether() {
   //明日の天気を取得
 
   //ウェザーニュースの天気情報
-  var url = `https://weathernews.jp/onebox/tenki/aichi/23362/`  
+  var url = PropertiesService.getScriptProperties().getProperty("WEATHER_URL")
   var html = UrlFetchApp.fetch(url).getContentText();  
   var $ = Cheerio.load(html);  
   var $div = $('#card_forecast > div:nth-child(2) > div > div.switchContent > div:nth-child(4) > section > div.wTable__inner > div.wTable__content > div:nth-child(1) > p.wTable__item.weather > img');
@@ -18,7 +18,6 @@ function get_wether() {
   console.log(weather_dic(out[0].slice(-7,-4)));
   return [out[0],weather_dic(out[0].slice(-7,-4))];
 }
-
 
 
 function weather_dic(id){
