@@ -8,10 +8,10 @@ function sendWithMessaging_homework(homework_data) {
 
   //宛先ユーザID
   //グループへ送信する場合
-  //const to = PropertiesService.getScriptProperties().getProperty('GROUP_ID');
+  const to = PropertiesService.getScriptProperties().getProperty('GROUP_ID');
 
   //（テスト用）自分へ送信する場合
-  const to = PropertiesService.getScriptProperties().getProperty('MY_ID');
+  //const to = PropertiesService.getScriptProperties().getProperty('MY_ID');
 
 
   //送信するメッセージを生成

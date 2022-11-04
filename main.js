@@ -23,6 +23,9 @@ function main(){
     //通知しない
     console.log("通知しません");
   }
+
+  //宿題の通知も同時にする
+  main_homework()
 }
 
 function get_spreadsheet_low(){
