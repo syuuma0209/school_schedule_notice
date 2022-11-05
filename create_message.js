@@ -48,37 +48,37 @@ function get_message(data) {
           {
             "type": "text",
             "text": "1│"+data[0][0],
-            "color": "#ffffff"
+            "color": data[4][0],
           },
           {
             "type": "text",
             "text": "2│"+data[0][1],
-            "color": "#ffffff"
+            "color": data[4][1],
           },
           {
             "type": "text",
             "text": "3│"+data[0][2],
-            "color": "#ffffff"
+            "color": data[4][2],
           },
           {
             "type": "text",
             "text": "4│"+data[0][3],
-            "color": "#ffffff"
+            "color": data[4][3],
           },
           {
             "type": "text",
             "text": "5│"+data[0][4],
-            "color": "#ffffff"
+            "color": data[4][4],
           },
           {
             "type": "text",
             "text": "6│"+data[0][5],
-            "color": "#ffffff"
+            "color": data[4][5],
           },
           {
             "type": "text",
             "text": "7│"+data[0][6],
-            "color": "#ffffff"
+            "color": data[4][6],
           }
         ],
         "position": "absolute",

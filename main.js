@@ -9,6 +9,11 @@ function main(){
 
   //通知するか
   var need_notice = sheet.getRange("C"+low).getValue()
+
+  //テスト用
+  //var need_notice = true
+
+
   if(need_notice){
     //データを取得
     var send_data = [];
@@ -16,6 +21,7 @@ function main(){
     send_data.push(sheet.getRange("L"+low+":R"+low).getValues()[0]);
     send_data.push(get_font_color(low))
     send_data.push(get_contact(low))
+    send_data.push(get_school_schedule_changing_colors(low));
 
     //送信
     sendWithMessaging(send_data);
@@ -24,7 +30,7 @@ function main(){
     console.log("通知しません");
   }
 
-  //宿題の通知も同時にする
+  //宿題の通知も同時に処理
   main_homework()
 }
 
@@ -72,4 +78,19 @@ function get_font_color(low){
   
   console.log(colors_out)
   return colors_out
+}
+
+function get_school_schedule_changing_colors(low){
+  var sheet = SpreadsheetApp.openById(SHEET_ID).getSheetByName("時間割DB")
+  var output_colors = []
+  var notes = sheet.getRange("E"+low+":K"+low).getNotes()[0];
+  for(var i=0;i<7;i++){
+    if (notes[i]==""){
+      output_colors.push("#ffffff");
+    }else{
+      output_colors.push("#69CAF0");
+    }
+  }
+  console.log(output_colors)
+  return output_colors;
 }

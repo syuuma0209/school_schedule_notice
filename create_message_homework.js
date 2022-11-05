@@ -16,7 +16,7 @@ var data ={
         "type": "box",
         "layout": "vertical",
         "contents": homework_data,
-        "paddingStart": "10px",
+        "paddingStart": "5px",
         "paddingTop": "10px"
       }
     ],
